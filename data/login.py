@@ -1,0 +1,2 @@
+class LoginForm:
+    pass
