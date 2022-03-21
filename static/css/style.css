@@ -6,3 +6,7 @@ main {
 h1 {
   color: darkgrey;
 }
+
+.greeting {
+  font-size: 20px;
+}
