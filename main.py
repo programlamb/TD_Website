@@ -1,5 +1,4 @@
 import datetime
-
 from flask import (
     Flask,
     render_template
@@ -7,13 +6,14 @@ from flask import (
 from flask_login import (
     LoginManager,
     login_user,
-    logout_user
+    logout_user,
+    login_required
 )
-from werkzeug.utils import redirect
-from data.register import RegisterForm
-from data.login import LoginForm
-from data.users import User
-from data import db_session
+# from werkzeug.utils import redirect
+# from data.register import RegisterForm
+# from data.login import LoginForm
+# from data.users import User
+# from data import db_session
 
 
 app = Flask(__name__)
@@ -96,5 +96,5 @@ def logout():
 
 
 if __name__ == "__main__":
-    db_session.global_init("db/data.sqlite")
+    # db_session.global_init("db/users.db")
     app.run(host="localhost")
