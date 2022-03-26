@@ -6,17 +6,17 @@ body {
 #panel {
     background-color: rgb(200, 200, 200);
     height: 100px;
-    padding-top: 1px;
+    padding-top: 1%;
 }
 
-#home-link {
+#home_link {
     color: black;
     font-size: 50px;
     background-color: rgb(200, 200, 200);
     border: 5px solid black;
     border-radius: 20px;
-    padding: 5px;
-    margin: 10px;
+    padding: 0.1%;
+    margin: 1%;
 }
 
 #avatar {
