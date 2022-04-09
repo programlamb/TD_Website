@@ -10,3 +10,31 @@ h1 {
 .greeting {
   font-size: 20px;
 }
+
+body {
+    margin: 0px
+}
+
+
+#panel {
+    background-color: rgb(200, 200, 200);
+    height: 100px;
+    padding-top: 1%;
+}
+
+#home-link {
+    color: black;
+    font-size: 50px;
+    background-color: rgb(200, 200, 200);
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 0.1%;
+    margin: 1%;
+    text-decoration: none;
+}
+
+#avatar {
+    float: right;
+}
+
+.container{}
