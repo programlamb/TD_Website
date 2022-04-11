@@ -11,6 +11,11 @@ h1 {
   font-size: 20px;
 }
 
+.login-and-register{
+  display: flex;
+  flex-direction: column;
+}
+
 body {
     margin: 0px
 }
