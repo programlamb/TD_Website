@@ -15,6 +15,8 @@ from data.login import LoginForm
 from data.users import User
 from data import db_session
 
+DATABASE = 'dbase/users.db'
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandex_lyceum_secret_key'
@@ -55,7 +57,6 @@ def reqister():
         user = User()
         user.name = regform.name.data
         user.email = regform.email.data
-        user.about = regform.about.data
         user.set_password(regform.password.data)
         db.add(user)
         db.commit()
@@ -89,12 +90,12 @@ def login():
 
 
 @app.route('/logout')
-
 def logout():
     logout_user()
     return redirect('/')
 
 
 if __name__ == "__main__":
+    db_session.global_init(DATABASE)
 
     app.run(host="localhost")
