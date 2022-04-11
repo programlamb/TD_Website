@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div class="login-and-register">
     <h1>Авторизация</h1>
     <form action="" method="post">
         {{form.hidden_tag()}}
@@ -21,5 +22,7 @@
         <p>{{form.remember_me()}} {{form.remember_me.label}}</p>
         <p>{{form.submit(type="submit", class="btn btn-primary")}}</p>
         <div>{{message}}</div>
+        <p>У вас нет аккаунта? Тогда <a href="/register">зарегистрируйтесь</a> на нашем сайте!</p>
     </form>
+    </div>
 {% endblock %}
