@@ -1,0 +1,33 @@
+body {
+    margin: 0px
+}
+
+
+#panel {
+    background-color: rgb(200, 200, 200);
+    height: 100px;
+    padding-top: 1%;
+}
+
+#home_link {
+    color: black;
+    font-size: 50px;
+    background-color: rgb(200, 200, 200);
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 0.1%;
+    margin: 1%;
+}
+
+#avatar {
+    float: right;
+}
+
+.forms{
+    background-color: rgb(220, 220, 220);
+    padding: 2%;
+    margin: 1%;
+    border-radius: 40px;
+}
+
+.container{}

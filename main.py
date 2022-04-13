@@ -36,7 +36,7 @@ def load_user(user_id):
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("register.html", title="Сайт фанатов игры Tank Duel")
+    return render_template("", title="Сайт фанатов игры Tank Duel")
 
 
 @app.route('/register', methods=['GET', 'POST'])
