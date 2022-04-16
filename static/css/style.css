@@ -42,4 +42,11 @@ body {
     float: right;
 }
 
+.forms{
+    background-color: rgb(220, 220, 220);
+    padding: 2%;
+    margin: 1%;
+    border-radius: 40px;
+}
+
 .container{}
