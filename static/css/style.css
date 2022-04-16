@@ -11,15 +11,17 @@ h1 {
   font-size: 20px;
 }
 
-.login-and-register{
+.login-and-register {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
     margin: 0px
 }
-
 
 #panel {
     background-color: rgb(200, 200, 200);
@@ -42,11 +44,11 @@ body {
     float: right;
 }
 
-.forms{
+.forms {
     background-color: rgb(220, 220, 220);
     padding: 2%;
     margin: 1%;
     border-radius: 40px;
 }
 
-.container{}
+.container {}
