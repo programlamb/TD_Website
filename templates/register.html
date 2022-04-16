@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+	<div class="forms login-and-register">
 	<h1>Регистрация</h1>
 	<form action="" method="post">
 		{{form.hidden_tag()}}
@@ -36,4 +37,5 @@
 		<p>{{form.submit(type="submit", class="btn btn-primary")}}</p>
 		{{message}}
 	</form>
+	</div>
 {% endblock %}
