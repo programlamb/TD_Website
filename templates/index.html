@@ -1,17 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="alert alert-info greeting" role="alert">
-        <h1>Добро пожаловать на сайт фанатов игры Tank Duel!</h1>
-        Здесь вы найдёте:
-        <ul>
-            <li>Интересные блоги;</li>
-            <li>Форум для общения;</li>
-            <li>Гайды и туториалы;</li>
-            <li>Модификации и дополнения;</li>
-            <li>Истории разработчиков;</li>
-            <li>Концепт-арты игры;</li>
-            <li>И многое другое!</li>
-        </ul>
+    <div>
+        <div class="alert alert-info greeting" role="alert">
+            <h1>Добро пожаловать на сайт фанатов игры Tank Duel!</h1>
+            Здесь вы найдёте:
+            <ul>
+                <li>Интересные блоги;</li>
+                <li>Форум для общения;</li>
+                <li>Гайды и туториалы;</li>
+                <li>Модификации и дополнения;</li>
+                <li>Истории разработчиков;</li>
+                <li>Концепт-арты игры;</li>
+                <li>И многое другое!</li>
+            </ul>
+        </div>
+        <nav class="nav-panel">
+            <p><a href="/blogs" style="color: white; ">Блоги</a></p>
+            <p><a href="/mods" style="color: white;">Модификации</a></p>
+            <p><a href="/concept-arts" style="color: white;">Концепт-арты</a></p>
+        </nav>
     </div>
 {% endblock %}
