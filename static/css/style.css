@@ -23,6 +23,15 @@ body {
     margin: 0px
 }
 
+.nav-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 50px; */
+  font-size: larger;
+  background-image: url(../img/tiles-background.png);
+}
+
 #panel {
     background-color: rgb(200, 200, 200);
     height: 100px;
@@ -51,4 +60,4 @@ body {
     border-radius: 40px;
 }
 
-.container {}
+.container{}
