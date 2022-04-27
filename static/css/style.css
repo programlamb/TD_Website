@@ -23,11 +23,27 @@ body {
     float: right;
 }
 
-.forms{
+.forms {
     background-color: rgb(220, 220, 220);
     padding: 2%;
     margin: 1%;
     border-radius: 40px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(200, 200, 200);
+  margin-top: 10px;
+}
+
+.nav-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 50px; */
+  font-size: larger;
+  background-image: url(../img/tiles-background.png);
 }
 
 .container{}

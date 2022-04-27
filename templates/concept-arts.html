@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        {% for art in arts %}
+            <h1>art</h1>
+            <img src="{{ url_for('static/img', filename = art) }}" alt="Аватар" id="avatar">
+        {% endfor %}
+    </div>
+{% endblock %}
