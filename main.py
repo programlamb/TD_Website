@@ -88,6 +88,14 @@ def login():
     )
 
 
+@app.route("/concept_arts")
+def concept_arts():
+    images = ["./static/img/Early-main-menu.png",
+              "./static/img/Grass-1.jpg",
+              "./static/img/Grass-2.png"]
+    return render_template("concept-arts.html", arts=images)
+
+
 @app.route('/logout')
 @login_required
 def logout():
