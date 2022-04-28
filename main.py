@@ -36,7 +36,7 @@ def load_user(user_id):
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("", title="Сайт фанатов игры Tank Duel")
+    return render_template("index.html", title="Сайт фанатов игры Tank Duel")
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -93,6 +93,12 @@ def login():
 def logout():
     logout_user()
     return redirect('/')
+
+
+@app.route('/concept-arts')
+def concept_arts():
+    images = ["tiles-background"]
+    return render_template("concept-arts.html", arts=images)
 
 
 if __name__ == "__main__":

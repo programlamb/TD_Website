@@ -5,7 +5,7 @@
     <div>
         {% for art in arts %}
             <h1>art</h1>
-            <img src="{{ url_for('static/img', filename = art) }}" alt="Аватар" id="avatar">
+            <img src="{{ url_for('static', filename='/img/' + art + '.png') }}" alt="{{ art }}">
         {% endfor %}
     </div>
 {% endblock %}
