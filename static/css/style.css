@@ -1,0 +1,70 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: darkgrey;
+}
+
+.greeting {
+  font-size: 20px;
+}
+
+.login-and-register {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+    margin: 0px
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(200, 200, 200);
+  margin-top: 10px;
+}
+
+.nav-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-top: 50px; */
+  font-size: larger;
+  background-image: url(../img/tiles-background.png);
+}
+
+#panel {
+    background-color: rgb(200, 200, 200);
+    height: 100px;
+    padding-top: 1%;
+}
+
+#home-link {
+    color: black;
+    font-size: 50px;
+    background-color: rgb(200, 200, 200);
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 0.1%;
+    margin: 1%;
+    text-decoration: none;
+}
+
+#avatar {
+    float: right;
+}
+
+.forms {
+    background-color: rgb(220, 220, 220);
+    padding: 2%;
+    margin: 1%;
+    border-radius: 40px;
+}
+
+.container{}

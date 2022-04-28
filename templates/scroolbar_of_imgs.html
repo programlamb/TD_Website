@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        {% for img in imgs %}
+            <h1>{{img[1]}}</h1>
+            <img src="{{ url_for('static', filename='/img/' + img[0]) }}" alt="{{ img[0] }}">
+        {% endfor %}
+    </div>
+{% endblock %}
