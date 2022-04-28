@@ -1,5 +1,4 @@
 import datetime
-
 from flask import (
     Flask,
     render_template
@@ -7,15 +6,14 @@ from flask import (
 from flask_login import (
     LoginManager,
     login_user,
-    logout_user
+    logout_user,
+    login_required
 )
 from werkzeug.utils import redirect
 from data.register import RegisterForm
 from data.login import LoginForm
 from data.users import User
 from data import db_session
-
-DATABASE = 'dbase/users.db'
 
 
 app = Flask(__name__)
@@ -57,6 +55,7 @@ def reqister():
         user = User()
         user.name = regform.name.data
         user.email = regform.email.data
+        user.about = regform.about.data
         user.set_password(regform.password.data)
         db.add(user)
         db.commit()
@@ -90,18 +89,12 @@ def login():
 
 
 @app.route('/logout')
+@login_required
 def logout():
     logout_user()
     return redirect('/')
 
 
-@app.route('/concept-arts')
-def concept_arts():
-    images = ["tiles-background"]
-    return render_template("concept-arts.html", arts=images)
-
-
 if __name__ == "__main__":
-    db_session.global_init(DATABASE)
-
+    db_session.global_init("db/users.db")
     app.run(host="localhost")
