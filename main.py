@@ -9,11 +9,11 @@ from flask_login import (
     logout_user,
     login_required
 )
-# from werkzeug.utils import redirect
-# from data.register import RegisterForm
-# from data.login import LoginForm
-# from data.users import User
-# from data import db_session
+from werkzeug.utils import redirect
+from data.register import RegisterForm
+from data.login import LoginForm
+from data.users import User
+from data import db_session
 
 
 app = Flask(__name__)
@@ -55,7 +55,6 @@ def reqister():
         user = User()
         user.name = regform.name.data
         user.email = regform.email.data
-        user.about = regform.about.data
         user.set_password(regform.password.data)
         db.add(user)
         db.commit()
@@ -88,7 +87,7 @@ def login():
     )
 
 
-@app.route("/concept_arts")
+@app.route("/concept-arts")
 def concept_arts():
     images = ["./static/img/Early-main-menu.png",
               "./static/img/Grass-1.jpg",
@@ -104,5 +103,5 @@ def logout():
 
 
 if __name__ == "__main__":
-    # db_session.global_init("db/users.db")
+    db_session.global_init("db/users.db")
     app.run(host="localhost")
