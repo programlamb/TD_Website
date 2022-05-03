@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h1>Модификации</h1>
+        {% if current_user.is_authenticated %}
+            <a href="/add_mod" class="btn btn-info">Создать мод</a>
+            <div class="posts">
+                {% for mod in mods %}
+                    <h2>{{mod[0]}}</h2>
+                    <p style="text-indent: 25px;">{{mod[1]}}</p>
+                    <img src="{{ url_for('static', filename='/img/' + mod[2]) }}" alt="{{ mod[0] }}">
+                    <div>Автор — {{mod[3]}}, Дата написания — {{mod[4]}}</div>
+                {% endfor %}
+            </div>
+        {% else %}
+        <div class="alert alert-warning" role="alert">
+            <h2>Данный раздел доступен только для авторизованных пользователей</h2>
+            <p>Чтобы снять ограничение, пожалуйста, <a href="/login">войдите</a> в свой аккаунт или <a href="/register">зарегистрируйтесь</a> на нашем сайте</p>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
