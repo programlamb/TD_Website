@@ -7,7 +7,8 @@ from flask_login import (
     LoginManager,
     login_user,
     logout_user,
-    login_required
+    login_required,
+    current_user
 )
 from werkzeug.utils import redirect
 from data.register import RegisterForm
@@ -89,10 +90,31 @@ def login():
 
 @app.route("/concept-arts")
 def concept_arts():
-    images = ["./static/img/Early-main-menu.png",
-              "./static/img/Grass-1.jpg",
-              "./static/img/Grass-2.png"]
-    return render_template("concept-arts.html", arts=images)
+    images = [("Early-main-menu.png", "Ранняя версия главного меню"),
+              ("Grass-1.jpg", "Тайл травы (1)"),
+              ("Grass-2.jpg", "Тайл травы (2)"),
+              ("Big-tanks.png", "Большие танки :D"),
+              ("Black-text.png", "Раньше у нас был чёрный текст в главном меню"),
+              ("Bush.png", "Куст (вырезан из игры)"),
+              ("Unstandart-tiles.png", "Разрушаемые кирпичи (отменено в ходе разработки)")]
+    return render_template("scroolbar_of_imgs.html", imgs=images)
+
+
+@app.route("/blogs")
+def blog():
+    images = [("meeting.jpg", "Встреча (без тимлида)")]
+    return render_template("scroolbar_of_imgs.html", imgs=images)
+
+
+@app.route("/mods")
+def mods():
+    modifications = [("Snow mod", '''Данный мод заменяет текстуру травы на снег.
+                                     \nУстановка:
+                                     \n1. Скачать данную картинку;
+                                     \n2. Переименовать её в "grass.png";
+                                     \n3. Заменить файл с таким же названием в папке pic.''',
+                      "snow.png", "parselt134", "21.04.22")]
+    return render_template("mods.html", mods=modifications)
 
 
 @app.route('/logout')
