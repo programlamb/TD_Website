@@ -3,7 +3,7 @@ main {
   justify-content: center;
 }
 
-h1 {
+h1, h2 {
   color: darkgrey;
 }
 
@@ -37,6 +37,14 @@ footer {
   /* margin-top: 50px; */
   font-size: larger;
   background-image: url(../img/tiles-background.png);
+}
+
+.posts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  border: 1px solid black;
 }
 
 #panel {
