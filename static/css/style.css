@@ -19,6 +19,14 @@ body {
     margin: 1%;
 }
 
+#exit-link {
+    color: white;
+    font-size: 25px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    padding: 1%;
+}
+
 #avatar {
     float: right;
 }
