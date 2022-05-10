@@ -1,8 +1,7 @@
-
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="login" class="forms">
+    <div class="forms login-and-register">
         <h1>Авторизация</h1>
         <form action="" method="post">
             {{form.hidden_tag()}}
@@ -12,17 +11,18 @@
                 {% for error in form.email.errors %}
                     <div class="alert alert-danger" role="alert">{{error}}</div>
                 {% endfor %}
+            </p>
             <p>
                 {{form.password.label}}<br>
                 {{form.password(class="form-control", type="password")}}<br>
                 {% for error in form.password.errors %}
                     <div class="alert alert-danger" role="alert">{{error}}</div>
                 {% endfor %}
-            <p align="center">
-                {{form.submit(type="submit", class="btn btn-primary")}}
+            </p>
+            <p>{{form.remember_me()}} {{form.remember_me.label}}</p>
+            <p>{{form.submit(type="submit", class="btn btn-primary")}}</p>
             <div>{{message}}</div>
             <p>У вас нет аккаунта? Тогда <a href="/register">зарегистрируйтесь</a> на нашем сайте!</p>
         </form>
-        <p>Если вы хотите выйти из текущего акаунта, нажмите <a href="/logout">сюда</a>.</p>
     </div>
 {% endblock %}
