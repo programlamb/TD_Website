@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <h2 class="iw-modal-title">Вы зашли как {{ current_user.email }}</h2>
+        <a id="exit-link" href="/logout" >Нажмите чтобы выйти из акаунта</a>
+    </div>
+{% endblock %}
